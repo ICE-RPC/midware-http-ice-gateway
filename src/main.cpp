@@ -44,6 +44,9 @@ int main(int argc, char ** argv) {
         return EXIT_FAILURE;
     }
 
+    int pid = getpid();
+    srand(time(NULL) + pid);
+
     // 初始化ice服务
     std::string err{"success"};
     const std::vector<struct ice_config_service_t>& ice_srv_configs = config.getIceSrvConfigs();
