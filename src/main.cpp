@@ -34,7 +34,7 @@ void gateway_init_thread(evhtp_t* evhtp, evthr_t* thread, void* arg) {
 
 int main(int argc, char ** argv) {
 
-    std::string cfg_file = "config.json";
+    std::string cfg_file = "server.cfg";
     if(argc > 1) {
         cfg_file = argv[1];
     }

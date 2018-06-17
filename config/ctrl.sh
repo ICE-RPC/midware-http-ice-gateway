@@ -15,7 +15,7 @@ WORKDIR=$(cd `dirname $0`; pwd)
 ulimit -c unlimited
 
 PROGRAME="midware-http-ice-gateway"
-CONFIG="config.json"
+CONFIG="server.cfg"
 
 RETVAL=0
 SELF_SCRIPT="$0"

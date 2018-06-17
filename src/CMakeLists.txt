@@ -12,16 +12,18 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/third-party/evhtp/include
     ${CMAKE_SOURCE_DIR}/third-party/libcuckoo/include
     /home/apps/cpplibs/Ice-3.6.4/include
+    /home/apps/cpplibs/libconfig-1.7.2/include
 )
 
 link_directories(
     ${CMAKE_SOURCE_DIR}/
     ${CMAKE_SOURCE_DIR}/common/
     ${CMAKE_SOURCE_DIR}/src/
-    /home/apps/cpplibs/Ice-3.6.4/lib64
-    /home/apps/cpplibs/Ice-3.6.4/lib64/c++11
     ${CMAKE_SOURCE_DIR}/third-party/evhtp/lib
     ${CMAKE_SOURCE_DIR}/third-party/libcuckoo/lib
+    /home/apps/cpplibs/Ice-3.6.4/lib64
+    /home/apps/cpplibs/Ice-3.6.4/lib64/c++11
+    /home/apps/cpplibs/libconfig-1.7.2/lib
 )
 
 set(SERVER_SRC
@@ -40,5 +42,6 @@ target_link_libraries(midware-http-ice-gateway
     evhtp event event_openssl event_core event_extra event_pthreads event_extra ssl crypto
     Ice IceGrid IceUtil
     cityhash
+    config++
 )
 

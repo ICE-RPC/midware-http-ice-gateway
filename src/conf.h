@@ -48,11 +48,11 @@ private:
 private:
     int http_threads_{2};
     const char* http_addr_{"127.0.0.1"};
-    uint16_t http_port_{8089};
-    int http_backlog_{1024};
-    int http_nodelay_{0};
-    int http_defer_accept_{0};
-    int http_reuser_port_{0};
+    unsigned int http_port_{8089};
+    unsigned int http_backlog_{1024};
+    unsigned int http_nodelay_{0};
+    unsigned int http_defer_accept_{0};
+    unsigned int http_reuser_port_{0};
 
     std::unordered_map<std::string, struct method_config_t> method2srvid_;
 
